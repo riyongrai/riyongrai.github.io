@@ -1280,3 +1280,22 @@ ul.slides li {
     transform: scale(1.05) rotate(720deg); /* Adjust the rotate value */
 }
 
+ 
+
+#greeting-container {
+    text-align: center;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+#greeting-message {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+ v

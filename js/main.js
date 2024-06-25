@@ -62,3 +62,41 @@ Menu
 })();
 
 
+window.onload = function() {
+    var name = prompt("Hey there! Enter your name:");
+
+    // Convert name to uppercase
+    name = name ? name.toUpperCase() : "VISITOR";
+
+    var date = new Date();
+    var hour = date.getHours();
+    var greeting;
+
+    if (hour >= 0 && hour < 12) {
+        greeting = "Good Morning";
+    } else if (hour >= 12 && hour < 18) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good Evening";
+    }
+
+    // Array of humorous messages
+    var humorousMessages = [
+        "Prepare yourself, " + name + "! The adventure awaits!",
+        "Hold on tight, " + name + "! You're about to enter a world of wonders!",
+        "Congratulations, " + name + "! You've stumbled upon the treasure trove!",
+        "Welcome, esteemed guest " + name + "! Get ready for some serious fun!",
+        "Ahoy there, " + name + "! You've just stepped into the land of infinite possibilities!"
+    ];
+
+    // Select a random humorous message
+    var randomIndex = Math.floor(Math.random() * humorousMessages.length);
+    var humorousMessage = humorousMessages[randomIndex];
+
+    var message = `${greeting}, ${name}! ${humorousMessage}`;
+
+    // Display greeting message on the page
+    var greetingMessageElement = document.getElementById('greeting-message');
+    greetingMessageElement.textContent = message;
+    greetingMessageElement.classList.remove('hidden');
+};
