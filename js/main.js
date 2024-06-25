@@ -60,6 +60,8 @@ Menu
 	init();
 
 })();
+
+
 window.onload = function() {
 	var name = prompt("Hey there! Enter your name:");
 

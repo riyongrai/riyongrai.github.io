@@ -1283,8 +1283,6 @@ ul.slides li {
 #greeting-container {
     margin: 20px;
     padding: 20px;
-
-
 }
 
 #greeting-message {
@@ -1292,4 +1290,38 @@ ul.slides li {
 	font-weight: bolder;
     color: #333;
     margin-top: 20px;
+}
+@media (max-width: 768px) {
+    #greeting-message {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        margin-top: 15px; /* Adjust margin top */
+    }
+}
+
+@media (max-width: 480px) {
+    #greeting-message {
+        font-size: 10px; /* Further reduce font size for smaller screens */
+        margin-top: 10px; /* Further adjust margin top */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 60px; /* Adjust font size for smaller screens */
+        letter-spacing: -4px; /* Adjust letter spacing accordingly */
+        line-height: 65px; /* Adjust line height */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 40px; /* Further reduce font size for smaller screens */
+        letter-spacing: -2px; /* Adjust letter spacing */
+        line-height: 45px; /* Adjust line height */
+    }
+}
+@media (max-width: 768px) {
+    .menu-button {
+        display: none; /* Hide the button on screens smaller than 768px */
+    }
 }
