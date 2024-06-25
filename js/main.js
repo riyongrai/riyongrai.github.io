@@ -66,7 +66,7 @@ window.onload = function() {
 	var name = prompt("Hey there! Enter your name:");
 
 	// Convert name to uppercase
-	name = name ? name.toUpperCase() : "VISITOR";
+	name = name ? name.toUpperCase() : "ANONYMOUS PERSON";
 
 	var date = new Date();
 	var hour = date.getHours();
