@@ -1339,30 +1339,39 @@ ul.slides li {
 .riyong-card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between; /* Adjusted to space-between for equal spacing */
 }
 
 .video {
-    /* flex:  */
+    flex: 0 0 calc(33.33% - 20px); /* 33.33% width for 3 boxes in a row, minus margins */
     margin: 10px;
-    /* max-width: 31%; */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-	border:1px solid yellow;
-	font-size: 12px;
-    
+    font-size: 12px;
 }
 
 .video iframe {
     width: 100%;
     height: 200px;
-	border:1px solid green;
+    border: 1px solid green;
 }
+
 
 #yt-h1 {
     font-size: 30px;
 	font-weight: bold;
     margin: 15px;
     text-align: center;
+}
+@media (max-width: 1024px) {
+    .video {
+        flex: 0 0 calc(50% - 20px); /* Two boxes per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .video {
+        flex: 0 0 calc(100% - 20px); /* One box per row */
+    }
 }
