@@ -1360,7 +1360,7 @@ ul.slides li {
 	border:1px solid green;
 }
 
-.video h1 {
+#yt-h1 {
     font-size: 30px;
 	font-weight: bold;
     margin: 15px;
