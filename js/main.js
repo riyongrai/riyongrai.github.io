@@ -101,3 +101,29 @@ window.onload = function() {
 	greetingMessageElement.innerHTML = message; // Use innerHTML to render HTML content
 	greetingMessageElement.classList.remove('hidden');
 };
+
+// Youtube vidoes
+const API_KEY = 'AIzaSyAJ4WiKChER-rO5vpfkQKFL8Yal1NT632Q'; // Replace with your actual API key
+const CHANNEL_ID = 'UCmb5jR_f1Yp26SEwCZ42OvA'; // Replace with your actual channel ID
+
+async function getLatestVideos() {
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=9`);
+    const data = await response.json();
+    renderVideos(data.items);
+}
+
+function renderVideos(videos) {
+    const videosContainer = document.getElementById('videos');
+    videos.forEach(video => {
+        const videoElement = document.createElement('div');
+        videoElement.classList.add('video');
+        videoElement.innerHTML = `
+            <iframe src="https://www.youtube.com/embed/${video.id.videoId}" frameborder="0" allowfullscreen></iframe>
+            <h2>${video.snippet.title}</h2>
+        `;
+        videosContainer.appendChild(videoElement);
+    });
+}
+
+// Fetch and render the latest videos on page load
+getLatestVideos();

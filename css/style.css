@@ -1325,3 +1325,44 @@ ul.slides li {
         display: none; /* Hide the button on screens smaller than 768px */
     }
 }
+
+/* Youtube videos */
+
+
+.riyong-vid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.riyong-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.video {
+    /* flex:  */
+    margin: 10px;
+    /* max-width: 31%; */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+	border:1px solid yellow;
+	font-size: 12px;
+    
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+	border:1px solid green;
+}
+
+.video h1 {
+    font-size: 30px;
+	font-weight: bold;
+    margin: 15px;
+    text-align: center;
+}
