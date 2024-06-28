@@ -1238,15 +1238,16 @@ ul.slides li {
 }
 #iron{
 	width: 230px;
+	transition: transform 0.5s ease;
 }
 
 #yt{
 	width: 300px;
-	transition: transform 0.3s ease;
+	transition: transform 0.5s ease;
 }
 
 #mcaa {
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 #mcaa:hover, #yt:hover, #iron:hover{
@@ -1434,10 +1435,8 @@ ul.slides li {
   /* Basic styling for the container */
   .container-random {
 	max-width: 100%; /* Adjust max-width as per your design */
-	/* margin: 20px auto; */
+	height: 300px;
 	padding: 60px 20px;
-	/* border: 1px solid #ccc; */
-	border-radius: 8px;
 	background-color: #f9f9f9;
 	text-align: center;
 	font-family: 'Roboto', sans-serif; /* Apply Roboto font */
