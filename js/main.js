@@ -3,9 +3,9 @@ $(window).load(function(){
 });
 
 
-/
-Learn More Page Scroll
-*/
+
+// Learn More Page Scroll
+
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -16,9 +16,8 @@ $(function() {
     });
 });
 
-/
-Menu
-*/ 
+// Menu
+
 (function() {
 
 	var bodyEl = document.body,
@@ -82,12 +81,13 @@ window.onload = function() {
 
 	// Array of humorous messages
 	var humorousMessages = [
-		`Prepare yourself, <span style="color: blue; font-weight: bold;">${name}</span>! The adventure awaits!`,
-		`Hold on tight, <span style="color: blue; font-weight: bold;">${name}</span>! You're about to enter a world of wonders!`,
-		`Congratulations, <span style="color: blue; font-weight: bold;">${name}</span>! You've stumbled upon some treasure!`,
-		`Welcome, <span style="color: blue; font-weight: bold;">${name}</span>! Get ready for some serious fun!`,
-		`Ahoy there, <span style="color: blue; font-weight: bold;">${name}</span>! Let's set sail on the seas of imagination!`
+		`Prepare yourself, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! The adventure awaits!`,
+		`Hold on tight, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! You're about to enter a world of wonders!`,
+		`Congratulations, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! You've stumbled upon some treasure!`,
+		`Welcome, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! Get ready for some serious fun!`,
+		`Ahoy there, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! Let's set sail on the seas of imagination!`
 	];
+	
 
 	// Select a random humorous message
 	var randomIndex = Math.floor(Math.random() * humorousMessages.length);
@@ -186,17 +186,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	"World: There are more possible iterations of a game of chess than there are atoms in the known universe. The number of possible unique chess games is estimated to be around 10^120.",
 	"Technology: The first website, created by Tim Berners-Lee in 1991, is still online today. It was dedicated to information about the World Wide Web project and served as an introduction to the concept for new users.",
 	"These facts highlight the diverse and often surprising aspects of science, history, technology, and the world around us.",
-"Science: The human brain is more active during sleep than during the day when awake, especially during dreams.",
-"History: The shortest war in history was between Britain and Zanzibar on August 27, 1896. It lasted only 38 minutes.",
-"USA: The Library of Congress in Washington, D.C., is the largest library in the world, containing over 168 million items.",
-"World: There are more trees on Earth than there are stars in the Milky Way galaxy.",
-"Technology: The first 1GB hard drive, introduced by IBM in 1980, weighed over 500 pounds and cost $40,000.",
-"Science: A teaspoonful of neutron star material would weigh about 6 billion tons, roughly equivalent to the weight of Mount Everest.",
-"History: The Eiffel Tower in Paris was originally intended to be a temporary installation and was almost torn down in 1909.",
-"USA: Alaska is the state with the highest percentage of people who walk to work.",
-"World: Mount Everest grows about 0.2 inches (0.5 cm) taller each year due to upward thrust caused by tectonic activity.",
-"Technology: The first computer virus was created in 1983 and was called the Elk Cloner. It spread through floppy disks on Apple II computers.",
-"These facts provide insight into various aspects of science, history, technology, and the world, showcasing their fascinating and sometimes unexpected nature."
+	"Science: The human brain is more active during sleep than during the day when awake, especially during dreams.",
+	"History: The shortest war in history was between Britain and Zanzibar on August 27, 1896. It lasted only 38 minutes.",
+	"USA: The Library of Congress in Washington, D.C., is the largest library in the world, containing over 168 million items.",
+	"World: There are more trees on Earth than there are stars in the Milky Way galaxy.",
+	"Technology: The first 1GB hard drive, introduced by IBM in 1980, weighed over 500 pounds and cost $40,000.",
+	"Science: A teaspoonful of neutron star material would weigh about 6 billion tons, roughly equivalent to the weight of Mount Everest.",
+	"History: The Eiffel Tower in Paris was originally intended to be a temporary installation and was almost torn down in 1909.",
+	"USA: Alaska is the state with the highest percentage of people who walk to work.",
+	"World: Mount Everest grows about 0.2 inches (0.5 cm) taller each year due to upward thrust caused by tectonic activity.",
+	"Technology: The first computer virus was created in 1983 and was called the Elk Cloner. It spread through floppy disks on Apple II computers.",
+	"These facts provide insight into various aspects of science, history, technology, and the world, showcasing their fascinating and sometimes unexpected nature."
   ];
 
   // Function to display a random sentence
@@ -210,5 +210,5 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initial display
   displayRandomSentence();
 
-  // Change sentence every 10 seconds
-  setInterval(displayRandomSentence, 10000);
+  // Change sentence every 5 seconds
+  setInterval(displayRandomSentence, 5000);
