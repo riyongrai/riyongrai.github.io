@@ -3,9 +3,9 @@ $(window).load(function(){
 });
 
 
-/******************************************************************************************************************************
+/
 Learn More Page Scroll
-*******************************************************************************************************************************/
+*/
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -16,9 +16,9 @@ $(function() {
     });
 });
 
-/******************************************************************************************************************************
+/
 Menu
-*******************************************************************************************************************************/ 
+*/ 
 (function() {
 
 	var bodyEl = document.body,
@@ -127,3 +127,88 @@ function renderVideos(videos) {
 
 // Fetch and render the latest videos on page load
 getLatestVideos();
+
+//RENDER PHOTOS
+// script.js
+
+// script.js
+
+// script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const photoGallery = document.getElementById('photoGallery');
+
+    // Path to the directory containing images
+    const directoryPath = 'img/riyong/';
+
+    // Function to fetch images from directory and render them
+    async function fetchAndRenderImages() {
+        try {
+            const response = await fetch(directoryPath);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch directory listing (${response.status} ${response.statusText})`);
+            }
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const links = Array.from(doc.querySelectorAll('a[href$=".jpg"]'));
+
+            links.forEach(link => {
+                const imgSrc = `${directoryPath}${link.getAttribute('href')}`;
+                const imgAlt = link.textContent.trim() || link.getAttribute('href');
+                
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = imgAlt;
+                img.classList.add('photo-item');
+                
+                // Append the img element to the photoGallery container
+                photoGallery.appendChild(img);
+            });
+        } catch (error) {
+            console.error('Error fetching or rendering images:', error);
+        }
+    }
+
+    // Call the function to fetch and render images
+    fetchAndRenderImages();
+});
+
+ // JavaScript code goes here
+ const sentences = [
+	"Science: Octopuses have three hearts. Two pump blood to the gills, while the third pumps it to the rest of the body, making them highly efficient swimmers despite lacking a skeleton.",
+	"History: The Great Pyramid of Giza was originally covered in highly polished white limestone, so it shone brightly in the sun and could be seen from miles away.",
+	"USA: The shortest war in American history was the Toledo War between Ohio and Michigan in 1835. It lasted only 10 days and resulted in no casualties, but Michigan lost the disputed territory.",
+	"World: The Great Wall of China is not a single continuous wall but a series of walls and fortifications built by different Chinese dynasties over centuries. Its total length, including all branches, exceeds 13,000 miles.",
+	"Technology: The first email was sent by Ray Tomlinson in 1971. He sent it to himself as a test message between two computers sitting right next to each other, marking the beginning of modern electronic communications.",
+	"Science: Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old -and still perfectly edible.",
+	"History: Cleopatra VII of Egypt lived closer in time to the first Moon landing in 1969 than she did to the construction of the Great Pyramid of Giza. Cleopatra died in 30 BC, while the Great Pyramid was completed around 2560 BC.",
+	"USA: The Apollo 11 astronauts had to go through U.S. customs upon returning from the Moon. They had to declare Moon rocks and dust they collected as part of their mission.",
+	"World: There are more possible iterations of a game of chess than there are atoms in the known universe. The number of possible unique chess games is estimated to be around 10^120.",
+	"Technology: The first website, created by Tim Berners-Lee in 1991, is still online today. It was dedicated to information about the World Wide Web project and served as an introduction to the concept for new users.",
+	"These facts highlight the diverse and often surprising aspects of science, history, technology, and the world around us.",
+"Science: The human brain is more active during sleep than during the day when awake, especially during dreams.",
+"History: The shortest war in history was between Britain and Zanzibar on August 27, 1896. It lasted only 38 minutes.",
+"USA: The Library of Congress in Washington, D.C., is the largest library in the world, containing over 168 million items.",
+"World: There are more trees on Earth than there are stars in the Milky Way galaxy.",
+"Technology: The first 1GB hard drive, introduced by IBM in 1980, weighed over 500 pounds and cost $40,000.",
+"Science: A teaspoonful of neutron star material would weigh about 6 billion tons, roughly equivalent to the weight of Mount Everest.",
+"History: The Eiffel Tower in Paris was originally intended to be a temporary installation and was almost torn down in 1909.",
+"USA: Alaska is the state with the highest percentage of people who walk to work.",
+"World: Mount Everest grows about 0.2 inches (0.5 cm) taller each year due to upward thrust caused by tectonic activity.",
+"Technology: The first computer virus was created in 1983 and was called the Elk Cloner. It spread through floppy disks on Apple II computers.",
+"These facts provide insight into various aspects of science, history, technology, and the world, showcasing their fascinating and sometimes unexpected nature."
+  ];
+
+  // Function to display a random sentence
+  function displayRandomSentence() {
+	// Get a random index from the sentences array
+	const randomIndex = Math.floor(Math.random() * sentences.length);
+	// Display the sentence
+	document.getElementById("sentenceDisplay").textContent = sentences[randomIndex];
+  }
+
+  // Initial display
+  displayRandomSentence();
+
+  // Change sentence every 10 seconds
+  setInterval(displayRandomSentence, 10000);
