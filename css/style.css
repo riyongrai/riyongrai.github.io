@@ -765,7 +765,7 @@ img.grayscale:hover {
 	display:block;
 	margin:0;
 	padding:0;
-	height:auto;
+	height: 600px;;
 }
 .overlay {
 	display:block;
