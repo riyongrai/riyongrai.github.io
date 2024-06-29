@@ -1467,4 +1467,23 @@ ul.slides li {
 	color: #E04343;
 	font-family: 'Poppins', sans-serif; /* Apply Poppins font */
   }
+  .material-symbols-outlined {
+	/* Specify initial styles */
+	position: relative;
+	animation: moveUpDown 1s infinite alternate;
+  }
   
+  @keyframes moveUpDown {
+	0% {
+	  transform: translateY(0); /* Start position */
+	}
+	100% {
+	  transform: translateY(-10px); /* End position (adjust as needed) */
+	}
+  }
+  #tramp img{
+	height: 50px;
+    position: relative;
+    left: 109px;
+    top: -17px;
+  }
