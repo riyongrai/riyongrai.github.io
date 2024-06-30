@@ -39,7 +39,7 @@ a:hover,a:focus,a:active {
 	outline:none!important;
 }
 p {
-	color:#8c9398;
+	color:#000000;
 	word-spacing:1px;
 	line-height:25px;
 	font-size:14px;
@@ -59,13 +59,13 @@ h2::after {
 }
 h6 {
 	font-size:15px;
-	color:#8c8c8c;
+	color:#000000;
 	text-transform:uppercase;
 	font-weight:bold;
 }
 h6::after {
 	content:" ";
-	border:solid 1px #CCCCCC;
+	border:solid 1px #000000;
 	display:block;
 	width:65px;
 	margin-top: 20px;
@@ -1486,4 +1486,10 @@ ul.slides li {
     position: relative;
     left: 109px;
     top: -17px;
+  }
+
+  
+  .about-image img{
+	width: 100%; /* Makes images fill their parent containers */
+	height: auto; /* Ensures images maintain aspect ratio */
   }
