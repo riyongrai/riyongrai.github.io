@@ -388,6 +388,7 @@ table {
 	height:100%;
 	overflow:hidden;
 	font-size:0.75em;
+	z-index: 1000;
 }
 .icon-list {
 	float:right;
@@ -1492,4 +1493,9 @@ ul.slides li {
   .about-image img{
 	width: 100%; /* Makes images fill their parent containers */
 	height: auto; /* Ensures images maintain aspect ratio */
+  }
+  #visitor-counter{
+		text-align: center;
+		margin: 50px;
+	  	
   }

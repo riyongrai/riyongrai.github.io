@@ -214,20 +214,3 @@ document.addEventListener("DOMContentLoaded", function() {
   setInterval(displayRandomSentence, 5000);
 
 
-  // Function to track and display visitor count using localStorage
-  function trackVisitor() {
-	let visits = localStorage.getItem('visits');
-	
-	if (visits) {
-		visits = parseInt(visits) + 1;
-	} else {
-		visits = 1;
-	}
-	
-	localStorage.setItem('visits', visits);
-	
-	document.getElementById('visitor-count').innerText = `Visitor Count: ${visits}`;
-}
-
-// Call the function to track visitor on page load
-trackVisitor();
