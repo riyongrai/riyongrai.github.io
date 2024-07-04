@@ -1281,7 +1281,7 @@ ul.slides li {
   .button-33:hover {
     /* Neon green color (example) */
     box-shadow: rgba(57, 255, 20, 0.35) 0 -25px 18px -14px inset, rgba(57, 255, 20, 0.25) 0 1px 2px, rgba(57, 255, 20, 0.25) 0 2px 4px, rgba(57, 255, 20, 0.25) 0 4px 8px, rgba(57, 255, 20, 0.25) 0 8px 16px, rgba(57, 255, 20, 0.25) 0 16px 32px;
-    transform: scale(1.05) rotate(720deg); /* Adjust the rotate value */
+    transform: scale(1.05) rotate(3600deg); /* Adjust the rotate value */
 }
 
 #greeting-container {
