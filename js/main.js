@@ -103,11 +103,11 @@ window.onload = function() {
 };
 
 // Youtube vidoes
-const API_KEY = 'AIzaSyAJ4WiKChER-rO5vpfkQKFL8Yal1NT632Q'; // Replace with your actual API key
-const CHANNEL_ID = 'UCmb5jR_f1Yp26SEwCZ42OvA'; // Replace with your actual channel ID
+const API_KEY = 'AIzaSyAJ4WiKChER-rO5vpfkQKFL8Yal1NT632Q'; 
+const CHANNEL_ID = 'UCmb5jR_f1Yp26SEwCZ42OvA';
 
 async function getLatestVideos() {
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=9`);
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=6`);
     const data = await response.json();
     renderVideos(data.items);
 }
@@ -127,6 +127,7 @@ function renderVideos(videos) {
 
 // Fetch and render the latest videos on page load
 getLatestVideos();
+
 
 //RENDER PHOTOS
 // script.js
