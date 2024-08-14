@@ -1300,11 +1300,10 @@ ul.slides li {
 	/* background-color: #ffbd33; */
 	z-index: 1000; /* Ensure it appears above other content */
 	padding: 5px;
-	background: #15cbe1;
+		background: #8696da;
     z-index: 1000; /* Ensure it appears above other content */
-	color: #333; /* Text color */
-    font-weight: 500; /* Slightly bold text */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+
+	box-shadow: 2px 2px 15px 2px #181717;
 
 }
 @media (max-width: 768px) {
