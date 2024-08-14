@@ -1287,13 +1287,25 @@ ul.slides li {
 #greeting-container {
     margin: 20px;
     padding: 20px;
+	
 }
 
 #greeting-message {
     font-size: 12px;
 	font-weight: bolder;
     color: #333;
-    margin-top: 20px;
+	left: 15px;
+    top: 2px;
+	position: fixed; /* Fixes the element relative to the viewport */
+	/* background-color: #ffbd33; */
+	z-index: 1000; /* Ensure it appears above other content */
+	padding: 5px;
+	background: #15cbe1;
+    z-index: 1000; /* Ensure it appears above other content */
+	color: #333; /* Text color */
+    font-weight: 500; /* Slightly bold text */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+
 }
 @media (max-width: 768px) {
     #greeting-message {

@@ -80,12 +80,15 @@ window.onload = function() {
 	}
 
 	// Array of humorous messages
-	var humorousMessages = [
-		`Prepare yourself, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! The adventure awaits!`,
-		`Hold on tight, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! You're about to enter a world of wonders!`,
-		`Congratulations, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! You've stumbled upon some treasure!`,
-		`Welcome, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! Get ready for some serious fun!`,
-		`Ahoy there, <span style="color: blue; font-size: 24px; font-weight: bold;">${name}</span>! Let's set sail on the seas of imagination!`
+	// var humorousMessages = [
+	// 	`Prepare yourself, <span style="color: blue; font-size: 14px; font-weight: bold;">${name}</span>! The adventure awaits!`,
+	// 	`Hold on tight, <span style="color: blue; font-size: 14px; font-weight: bold;">${name}</span>! You're about to enter a world of wonders!`,
+	// 	`Congratulations, <span style="color: blue; font-size: 14px; font-weight: bold;">${name}</span>! You've stumbled upon some treasure!`,
+	// 	`Welcome, <span style="color: blue; font-size: 14px; font-weight: bold;">${name}</span>! Get ready for some serious fun!`,
+	// 	`Ahoy there, <span style="color: blue; font-size: 14px; font-weight: bold;">${name}</span>! Let's set sail on the seas of imagination!`
+	// ];
+    var humorousMessages = [
+		`<span style="color: blue; font-size: 14px; font-weight: bold;">${name}</span>! `
 	];
 	
 
